@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat&family=Plaster&display=swap');
+section {
+    margin: 0;
+    padding: 0;
+    /* background-color: #9900ff; */
+    color: #fafafa;
+  }
+  
+  section {
+    font-family: "Plaster", sans-serif;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  
+  section {
+    width: 84vw;
+    margin-top: 20px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  section::before,
+  section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10%; /* Adjust this value to control the width of the blurred areas */
+  height: 100%;
+
+  /* Adjust the color and opacity for the blur effect */
+  /* background:  linear-gradient(to right, rgba(0, 0, 0, 0), #9900ff);  */
+
+  filter: blur(5px); /* Adjust the blur radius as needed */
+}
+
+section::before {
+  left: 0;
+}
+
+section::after {
+  right: 0;
+}
+  
+  .parallax {
+    overflow: hidden;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .parallax .scroller {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 64px;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .parallax span {
+    display: block;
+    margin-right: 30px;
+  }
+
+  @media (max-width: 450px) {
+    .parallax .scroller {
+        font-weight: 500;
+        font-size: 50px;
+       
+      }
+  }
+  

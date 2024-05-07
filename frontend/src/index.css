@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.list div {
+  width: calc(
+    33.33% - 10px
+  ); /* Adjust the width of each item for three items per row */
+  margin-bottom: 20px; /* Add margin between items */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.container-recipes {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.rating {
+  height: 2rem;
+}
+.desc {
+  height: 7rem;
+}
+.title {
+  height: 4rem;
+}
+.image-div {
+  height: 15rem;
+}
+.recipes-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.recipes-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+.recipes-card .desc::-webkit-scrollbar {
+  width: 2px; /* Set the width of the scrollbar */
+}
+.recipes-card .desc::-webkit-scrollbar-thumb {
+  background: rgb(223, 221, 221); /* Blue color */
+  border-radius: 6px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the background color of the thumb */
+  border-radius: 6px; /* Rounded corners */
+}
+
+/* Customize the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change the background color on hover */
+}
+
+.pagination button {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.icon-placeholder {
+    /* width: 40px;
+    height: 40px;
+    border-radius: 50%; */
+    flex: 40px 0;
+    /* margin-right: 20px; */
+  }
